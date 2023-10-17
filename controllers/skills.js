@@ -12,3 +12,9 @@ function show(req, res) {
       title: "Programming Skills",
     };
 }
+function index(req, res) {
+  res.render("skills/index", {
+    skills: Skill.getAll(),
+    title: "All Skills",
+  });
+}

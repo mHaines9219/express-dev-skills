@@ -1,3 +1,13 @@
-<%- include('partials/header') %>
-
-    <%- include('partials/footer') %>
+<%- include('../partials/header') %>
+    <ul>
+        <% skills.forEach(function(s) { %>
+            <li>
+                <a href="/skills/<%= s.id %>">
+                    <%= s.skill %>
+                </a>
+                -
+                <%= s.learned ? 'done' : 'not done' %>
+            </li>
+            <% }); %>
+    </ul>
+    <%- include('../partials/footer') %>
