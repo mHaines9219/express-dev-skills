@@ -16,7 +16,7 @@ const skills = [
   },
   {
     id: 114,
-    skill: "PYHTON",
+    skill: "PYTHON",
     learned: false,
   },
   {
