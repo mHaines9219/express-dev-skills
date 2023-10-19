@@ -30,6 +30,7 @@ module.exports = {
   getAll,
   getOne,
   create,
+  deleteOne,
 };
 function create(skill) {
   // Add the id
@@ -46,4 +47,11 @@ function getOne(id) {
 
 function getAll() {
   return skills;
+}
+
+function deleteOne(id) {
+  // All properties attached to req.params are strings!
+  // Find the index based on the id of the todo object
+  const idx = skills.findIndex((skill) => skill.id === id);
+  skills.splice(idx, 1);
 }

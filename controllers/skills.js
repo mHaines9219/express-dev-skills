@@ -5,6 +5,7 @@ module.exports = {
   index,
   new: newSkill,
   create,
+  delete: deleteSkill,
 };
 
 function show(req, res) {
@@ -31,3 +32,9 @@ function create(req, res) {
   // Do a redirect anytime data is changed
   res.redirect("/skills");
 }
+
+function deleteSkill(req, res) {
+  Skill.deleteOne(req.params.id);
+  res.redirect("/skills");
+}
+

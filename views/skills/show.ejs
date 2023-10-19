@@ -1,6 +1,8 @@
 <%- include('../partials/header') %>
     <h3>
-        <%= skill.skill %>
+        <form action="/skills/<%= skill.id %>?_method=DELETE" class="delete-form" method="POST">
+            <button type="submit">X</button>
+            <%= skill.skill %>
     </h3>
     <h3>Complete: <%= skill.learned ? 'Yes' : 'No' %>
     </h3>
