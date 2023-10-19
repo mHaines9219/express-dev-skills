@@ -29,7 +29,15 @@ const skills = [
 module.exports = {
   getAll,
   getOne,
+  create,
 };
+function create(skill) {
+  // Add the id
+  skill.id = 119;
+  // New todos wouldn't be done :)
+  skill.learned = true;
+  skills.push(skill);
+}
 
 function getOne(id) {
   id = parseInt(id);
